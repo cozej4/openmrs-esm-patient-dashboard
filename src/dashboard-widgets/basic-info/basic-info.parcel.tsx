@@ -45,8 +45,9 @@ function BasicInfoParcel(props: BasicInfoParcelProps) {
       : "(No birthday";
     return (
       <div>
-        {patient.person.display || "(No name)"} -{" "}
-        {patient.person.dead ? "Deceased" : "Not deceased"} - {birthday} -{" "}
+        <h4>{patient.person.display || "(No name)"}</h4>
+        {patient.person.dead ? "Deceased" : "Birth Date"} {birthday}
+        <br></br>
         {renderIdentifiers()}
       </div>
     );

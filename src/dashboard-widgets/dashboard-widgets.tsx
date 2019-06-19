@@ -5,6 +5,7 @@ import Parcel from "single-spa-react/parcel";
 const patientDashboardParcels = [
   // A patient dashboard widget within this git repo
   () => import("./basic-info/basic-info.parcel").then(m => m.default),
+  () => System.import("@openmrs/my-dashboard-widget")
 ];
 
 export default function DashboardWidgets(props: DashboardWidgetsProps) {
@@ -39,7 +40,7 @@ export default function DashboardWidgets(props: DashboardWidgetsProps) {
 type DashboardWidgetsProps = {
   match: {
     params: {
-      patientUuid: string,
-    }
-  }
+      patientUuid: string;
+    };
+  };
 };
